@@ -11,6 +11,10 @@
     "clean": "rimraf -rf ./lib",
     "commit": "git-cz"
   },
+  "repository": {
+    "url": "https://github.com/Ceylonlatte/exposure-ts.git",
+    "type": "git"
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
@@ -21,8 +25,8 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Ceylonlatte",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@commitlint/cli": "^17.0.3",
