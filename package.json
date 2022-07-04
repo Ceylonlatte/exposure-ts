@@ -11,6 +11,9 @@
     "clean": "rimraf -rf ./lib",
     "commit": "git-cz"
   },
+  "files": [
+    "lib"
+  ],
   "repository": {
     "url": "https://github.com/Ceylonlatte/exposure-ts.git",
     "type": "git"
