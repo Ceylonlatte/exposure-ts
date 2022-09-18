@@ -1,0 +1,49 @@
+{
+  "name": "exposure-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.esm.js",
+  "module": "lib/index.esm.js",
+  "types": "lib/types/index.d.ts",
+  "scripts": {
+    "build": "tsc && rollup -c",
+    "dev": "tsc && rollup -c --watch",
+    "clean": "rimraf -rf ./lib",
+    "commit": "git-cz"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "url": "https://github.com/Ceylonlatte/exposure-ts.git",
+    "type": "git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "author": "Ceylonlatte",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.75.6",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-typescript2": "^0.32.1",
+    "typescript": "^4.7.3"
+  }
+}

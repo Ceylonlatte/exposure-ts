@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    /* 基础选项 */
+    /*  目标代码；将我们的ts代码编译转化成es5还是es6/es7...，esnext是es6的意思
+    为什么我们转化成es6？明明有浏览器不支持es6！
+    因为我们最终的编译还是通过babel来转化的，babel会根据.browerslistrc文件将代码转化为能让浏览器识别的代码，所以ts的编译仅仅是将ts转化为es，至于是es几无所谓，因为还有babel会将高级es转化为es5或其他浏览器可以识别的版本； */
+    "target": "es5", // 编译目标  指定 ECMAScript 目标版本：'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'.
+    "module": "esnext", // 模块类型 输出的代码使用什么方式进行模块化： 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'.
+    "lib": ["esnext", "dom"], // 编译过程中需要引入的库文件的列表
+    "removeComments": true, // 删除注释
+
+    /* 输出类型声明文件 */
+    "declaration": true, // 根据ts文件自动生成.d.ts声明文件和js文件
+    "outDir": "lib", // 输出目录
+    "declarationDir": "lib/types",
+
+    /* 模块解析选项 */
+    "moduleResolution": "node", // 此处设置为node,才能解析import xx from 'xx'
+    "esModuleInterop": true, // 支持别名导入: import * as React from "react"
+    "resolveJsonModule": true, // 支持导入Json模式
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    /* 严格类型检查选项 */
+    "strict": true, // 启用所有严格类型检查选项
+    "noImplicitAny": true, // 检查隐含 any 类型的表达式和声明
+
+    /* 额外检查 */
+    "noUnusedLocals": true, // 检查无用的变量.
+    //让ts跳过对第三方库的类型检测；有些类型都用不到，没必要ts把第三方库的类型都检测一遍，我们用到的导入进来，让后让ts检测即可；
+    "skipLibCheck": true // 跳过类库检测
+  },
+  "include": [/* 指定编译处理的文件列表 */ "src/**/*.ts"],
+
+  "exclude": ["node_modules", "build"] // *** 不进行类型检查的文件 ***
+}
