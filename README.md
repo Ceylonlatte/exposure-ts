@@ -60,9 +60,9 @@ Vue.prototype.$exposure = exposure;
 ### add
 
 | Name  | Type  | Description  |
-|---|---|---|---|
-| **el** | HTMLElement |
-| **trackData**  | any  |
+|---|---|---|
+| **el** | HTMLElement | |
+| **trackData**  | any | |
 | **exposureCallBack** | Function | exposureCallBack?: (exposure: CollectObj) => void |
 
 
